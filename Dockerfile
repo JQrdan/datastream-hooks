@@ -3,10 +3,10 @@ FROM ibmjava:8-jre
 COPY libs /hooks/libs/
 COPY bin /hooks/bin/
 COPY config /hooks/config/
-COPY init-topics.sh /hooks
+COPY *.sh /hooks/
 
 WORKDIR /hooks
 
-ENTRYPOINT [ "./init-topics.sh" ]
+ENTRYPOINT [ "./wait-for-it.sh", "-t", "0", "kafkarest:8082", "--", "./init-topics.sh" ]
 
 
