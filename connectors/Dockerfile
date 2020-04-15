@@ -1,7 +1,6 @@
 FROM ubuntu:latest
 
-RUN sudo apt update
-RUN sudo apt install curl
+RUN apt-get install curl
 
 COPY connectors/config/ /hooks/config/
 COPY connectors/*.sh /hooks/
