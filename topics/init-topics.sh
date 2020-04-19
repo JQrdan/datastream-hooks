@@ -31,3 +31,5 @@ echo "Creating topic connect-offsets"
 
 echo "Creating topic connect-status topic"
 ./bin/kafka-topics.sh --create --zookeeper ZOOKEEPER --replication-factor 3 --partitions 5 --topic connect-status
+
+exit 0

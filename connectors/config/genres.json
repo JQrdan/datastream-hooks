@@ -2,13 +2,16 @@
   "name": "elasticsearch-genre-averages",
   "config": {
     "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
-    "tasks.max": "1",
+    "tasks.max": "4",
     "topics": "genre-averages",
-    "key.ignore": "true",
     "connection.url": "http://es01:9200,http://es02:9200,http://es03:9200",
     "type.name": "kafka-connect",
     "value.converter": "org.apache.kafka.connect.json.JsonConverter",
     "value.converter.schemas.enable": "false",
-    "schema.ignore": "true"
+    "schema.ignore": "true",
+    "write.method": "upsert",
+    "batch.size": "1000",
+    "flush.timeout.ms": "30000",
+    "read.timeout.ms": "12000"
   }
 }
