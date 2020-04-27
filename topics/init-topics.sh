@@ -17,11 +17,11 @@ echo "Creating topic genres"
 echo "Creating topic genre-averages"
 ./bin/kafka-topics.sh --create --zookeeper ZOOKEEPER --replication-factor 1 --partitions 3 --topic genre-averages
 
-echo "Creating topic song-averages"
-./bin/kafka-topics.sh --create --zookeeper ZOOKEEPER --replication-factor 1 --partitions 3 --topic song-averages
-
 echo "Creating topic artist-averages"
 ./bin/kafka-topics.sh --create --zookeeper ZOOKEEPER --replication-factor 1 --partitions 3 --topic artist-averages
+
+echo "Creating topic album-averages"
+./bin/kafka-topics.sh --create --zookeeper ZOOKEEPER --replication-factor 1 --partitions 3 --topic album-averages
 
 echo "Creating topic connect-configs"
 ./bin/kafka-topics.sh --create --zookeeper ZOOKEEPER --replication-factor 3 --partitions 1 --topic connect-configs
