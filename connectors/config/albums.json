@@ -10,8 +10,8 @@
     "value.converter.schemas.enable": "false",
     "schema.ignore": "true",
     "write.method": "upsert",
-    "batch.size": "1000",
-    "flush.timeout.ms": "30000",
-    "read.timeout.ms": "12000"
+    "batch.size": "500",
+    "flush.timeout.ms": "60000",
+    "read.timeout.ms": "60000"
   }
 }
